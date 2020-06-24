@@ -1,0 +1,76 @@
+// $primarycolor: #05386b;
+// $secondarycolor: #edf5e1;
+
+$primarycolor: #edf5e1;
+$secondarycolor: blue;
+$black: #0e1111;
+$white: #fafafa;
+
+body {
+  padding-top: 16px;
+  color: $black;
+  background: $primarycolor;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+//end of globals
+.weatherCard {
+  width: 360px;
+  background-color: $secondarycolor;
+  border: thick, solid, $black;
+  border-radius: 5px;
+  padding: 0px 50px 5px;
+
+  &__weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--image {
+      width: 200px;
+      height: 200px;
+      padding: 0;
+    }
+    h1 {
+      margin: 0;
+    }
+    h3 {
+      font-style: italic;
+      font-weight: 100;
+      margin: 0;
+    }
+  }
+}

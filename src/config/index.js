@@ -8,9 +8,9 @@ export default async function fetchWeather(city) {
       params: {
         appid: process.env.REACT_APP_API_SPACE,
         q: "toronto",
+        units: "metric",
       },
     });
-    console.log("response", response);
     return response.data;
   } catch (error) {
     console.log(error);

@@ -1,19 +1,20 @@
 import React, { useContext } from "react";
 import { WeatherContext } from "../context/WeatherContext";
+import WeatherCard from "./WeatherCard";
 
-const NavBar = () => {
+const Home = () => {
   const { data } = useContext(WeatherContext);
-  console.log("data", data);
   return (
-    <nav>
-      <h1>My Weather App</h1>
+    <section className="Home">
+      <h1>Current Weather</h1>
       {data.name ? (
         <>
           <h2>{data.name}</h2>
+          <WeatherCard details={data.main} weather={data.weather[0]} />
         </>
       ) : null}
-    </nav>
+    </section>
   );
 };
 
-export default NavBar;
+export default Home;
