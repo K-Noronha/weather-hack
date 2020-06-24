@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://api.weatherstack.com/current";
+const url = "https://api.weatherstack.com/current";
 
 export default async function fetchWeather(city) {
   try {
