@@ -2,16 +2,16 @@ import React, { useContext } from "react";
 import { WeatherContext } from "../context/WeatherContext";
 
 const NavBar = () => {
-  const { location } = useContext(WeatherContext).data;
+  const { data } = useContext(WeatherContext);
   return (
     <nav>
       <h1>My Weather App</h1>
-      {location ? (
+      {data.location ? (
         <>
           <h2>
-            {location.name} {location.region}
+            {data.location.name} {data.location.region}
           </h2>
-          <h6>Last loaded at: {location.localtime}</h6>
+          <h6>Last loaded at: {data.location.localtime}</h6>
         </>
       ) : null}
     </nav>
