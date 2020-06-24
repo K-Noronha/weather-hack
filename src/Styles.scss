@@ -7,16 +7,6 @@ $thirdcolor: #ef6c33;
 $black: #0c4a60;
 $white: #fafafa;
 
-body {
-  padding-top: 16px;
-  color: $black;
-  background: $primarycolor;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 1.4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 h1 {
   font-size: 3em;
   line-height: 1;
@@ -47,7 +37,35 @@ h6 {
   margin-bottom: 1.5em;
 }
 
+.btnContainer {
+  position: fixed;
+  right: 50px;
+  top: 10px;
+  button {
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
 //end of globals
+.App {
+  padding-top: 0;
+  min-height: 100vh;
+  color: $black;
+  background: $primarycolor;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dark {
+  background-color: $black;
+  h1,
+  h2 {
+    color: $primarycolor;
+  }
+}
 .home {
   display: flex;
   flex-direction: column;
@@ -62,7 +80,7 @@ h6 {
   width: 360px;
   background-color: $secondarycolor;
   border: thick, solid, $black;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 0px 50px 5px;
 
   &__weather {
@@ -84,5 +102,13 @@ h6 {
       font-weight: 100;
       margin: 0;
     }
+  }
+}
+
+.darktheme {
+  background-color: $secondarycolor;
+  & div,
+  h1 {
+    color: $thirdcolor;
   }
 }

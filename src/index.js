@@ -4,13 +4,16 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import WeatherContextProvider from "./context/WeatherContext";
+import ThemeContextProvider from "./context/ThemeContext";
 
 //contexts
 
 ReactDOM.render(
   <React.StrictMode>
     <WeatherContextProvider>
-      <App />
+      <ThemeContextProvider>
+        <App />
+      </ThemeContextProvider>
     </WeatherContextProvider>
   </React.StrictMode>,
   document.getElementById("root")

@@ -11,12 +11,15 @@ const WeatherContextProvider = ({ children }) => {
     setData(response);
   }
 
+  const refreshWeather = () => {
+    fetchData();
+  };
   useEffect(() => {
     fetchData();
   }, []);
 
   return (
-    <WeatherContext.Provider value={{ data }}>
+    <WeatherContext.Provider value={{ data, refreshWeather }}>
       {children}
     </WeatherContext.Provider>
   );

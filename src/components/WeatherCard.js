@@ -1,11 +1,11 @@
 import React from "react";
 
-const WeatherCard = ({ details, weather }) => {
+const WeatherCard = ({ details, weather, theme }) => {
   const { temp, temp_min, temp_max, pressure, humidity } = details;
   const { main, description, icon } = weather;
 
   return (
-    <div className="weatherCard">
+    <div className={`weatherCard ${theme}`}>
       <div className="weatherCard__weather">
         <img
           className="weatherCard__weather--image"
