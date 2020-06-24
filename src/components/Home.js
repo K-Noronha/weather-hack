@@ -5,11 +5,11 @@ import WeatherCard from "./WeatherCard";
 const Home = () => {
   const { data } = useContext(WeatherContext);
   return (
-    <section className="Home">
-      <h1>Current Weather</h1>
+    <section className="home">
+      <h1>Current Weather For</h1>
       {data.name ? (
         <>
-          <h2>{data.name}</h2>
+          <h2 className="home__name">{data.name}</h2>
           <WeatherCard details={data.main} weather={data.weather[0]} />
         </>
       ) : null}
