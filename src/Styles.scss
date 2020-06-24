@@ -11,6 +11,11 @@ h1 {
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.5em;
+  padding-top: 30px;
+  text-align: center;
+  @media (max-width: 425px) {
+    font-size: 2em;
+  }
 }
 h2 {
   font-size: 2em;
@@ -39,11 +44,12 @@ h6 {
 
 .btnContainer {
   position: fixed;
-  right: 50px;
+  right: 30px;
   top: 10px;
   button {
     border-radius: 10px;
     padding: 10px;
+    margin: 0 5px;
   }
 }
 
@@ -82,6 +88,9 @@ h6 {
   border: thick, solid, $black;
   border-radius: 10px;
   padding: 0px 50px 5px;
+  @media (max-width: 426px) {
+    width: 150px;
+  }
 
   &__weather {
     display: flex;
