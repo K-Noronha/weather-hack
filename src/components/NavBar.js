@@ -3,15 +3,13 @@ import { WeatherContext } from "../context/WeatherContext";
 
 const NavBar = () => {
   const { data } = useContext(WeatherContext);
+  console.log("data", data);
   return (
     <nav>
       <h1>My Weather App</h1>
-      {data.location ? (
+      {data.name ? (
         <>
-          <h2>
-            {data.location.name} {data.location.region}
-          </h2>
-          <h6>Last loaded at: {data.location.localtime}</h6>
+          <h2>{data.name}</h2>
         </>
       ) : null}
     </nav>

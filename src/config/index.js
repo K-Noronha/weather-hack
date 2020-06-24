@@ -1,16 +1,16 @@
 import axios from "axios";
 
-const url = "https://api.weatherstack.com/current";
+const url = "https://api.openweathermap.org/data/2.5/weather";
 
 export default async function fetchWeather(city) {
   try {
     const response = await axios.get(url, {
       params: {
-        access_key: process.env.REACT_APP_API_SPACE,
-        query: "toronto",
+        appid: process.env.REACT_APP_API_SPACE,
+        q: "toronto",
       },
     });
-
+    console.log("response", response);
     return response.data;
   } catch (error) {
     console.log(error);
